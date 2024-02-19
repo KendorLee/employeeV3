@@ -2,6 +2,38 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <Panel id="Panel1">
+                <Table id="Table1" class="sapUiResponsiveMargin" width="auto"
+                items="{/Products}">
+                    <columns>
+                        <Column id="Column1">
+                            <Text id="Text1" text="Product ID" />
+                        </Column>
+                          <Column id="Column2">
+                            <Text id="Text2" text="Category ID" />
+                        </Column>
+                        <Column id="Column3">
+                            <Text id="Text3" text="Category" />
+                        </Column>                                          
+                    </columns>
+
+                    <items>
+                        <ColumnListItem id="ColumnListItem1">
+                            <cells>
+                                <ObjectNumber id="ObjectNumber1" number="{ProductID}"/>
+                                <Text id="Text4" text="{ProductName}"/>
+                                <Text id="Text5" text="{CategoryID}"/>
+                                <Text id="Text6" text="{Category}"/>
+
+                            </cells>
+                        
+                        </ColumnListItem>
+                    
+                    </items>
+                
+                </Table>
+            </Panel>
+        </content>
     </Page>
 </mvc:View>
